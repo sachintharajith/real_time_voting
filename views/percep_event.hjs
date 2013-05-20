@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>index</title>
+  <meta name="description" content="" />
+  <meta name="author" content="Sachintha" />
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>index</h1>
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+       var socket = io.connect('http://sachintha-sith.jit.su');
+      	function sendHappy() {
+        	socket.emit('send', { message: '+1' });
+         
+		} 
+		function sendNutral() {
+        	socket.emit('send', { message: '0' });
+         
+		}
+		function sendAngry() {
+        	socket.emit('send', { message: '-1' });
+         
+		}     
+      </script>
+    </header>
+
+    <div>
+    <button onclick="sendHappy()">Happy</button>
+    <button onclick="sendNutral()">Nutral</button>
+    <button onclick="sendAngry()">Angry</button>
+    <!--
+    	<form name="input" action="http://localhost:3000/post_percep" method="post">
+    		 User ID: <input type= "text" id="userId" name="userId" /><br />
+      		<button name = "vote" type = "submit" value = "+1">Happy</button>
+      		<button name = "vote" type = "submit" value = "0">Nutral</button>
+      		<button name = "vote" type = "submit" value = "-1">Angry</button>
+    	</form>
+     -->
+    </div>
+	<div>
+		<p>Your Vote is: {{ vote }}</p>
+		<p>Your ID is: {{ id }}</p>
+	</div>
+    <footer>
+     <p>&copy; Copyright  by Sachintha</p>
+    </footer>
+  </div>
+</body>
+</html>
