@@ -17,11 +17,12 @@ Using it...
 -----------
 
 1. Clone the repo locally
-2. cd into the cloned directory and run `npm install` to install the dependancies (includes mysql but never used :-) )
-3. Visit http://localhost:3000 and got to "Event perception" link in one browser window (Page A)
-4. Open another window and visit http://localhost:8000/ and go to "Event Perception graph" link(Page B)
-5. Note that the initial dataset for the graph has been mocked
-6. You can see the graph shows the average rating as you vote!
+2. Download and install node and npm (www.nodejs.org)
+3. cd into the cloned directory and run `npm install` to install the dependancies (includes mysql but never used :-) )
+4. Visit http://localhost:3000 and got to "Event perception" link in one browser window (Page A)
+5. Open another window and visit http://localhost:8000/ and go to "Event Perception graph" link(Page B)
+6. Note that the initial dataset for the graph has been mocked
+7. You can see the graph shows the average rating as you vote!
 
 
 Contact...
